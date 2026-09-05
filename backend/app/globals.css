@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* ─── SWARA Design System ─── */
+
+:root {
+  --color-bg: #0a0a12;
+  --color-surface: #12121e;
+  --color-border: #1e1e32;
+
+  /* Category colors */
+  --cat-people: #8b5cf6;
+  --cat-body: #ec4899;
+  --cat-time: #f59e0b;
+  --cat-function: #3b82f6;
+  --cat-social: #10b981;
+  --cat-emotion: #f97316;
+}
+
+/* ─── Base ─── */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #0a0a12;
+  color: #f1f5f9;
+}
+
+/* Hide scrollbar while keeping functionality */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Category color strips on tiles ─── */
+.tile-category-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.category-people      { background-color: var(--cat-people); }
+.category-body-needs  { background-color: var(--cat-body); }
+.category-time-degree { background-color: var(--cat-time); }
+.category-function    { background-color: var(--cat-function); }
+.category-social      { background-color: var(--cat-social); }
+.category-emotion     { background-color: var(--cat-emotion); }
+
+/* ─── Focus styles for keyboard navigation ─── */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* ─── Smooth transitions ─── */
+button {
+  transition: all 0.12s ease;
+}
+
+/* ─── Selection ring animation ─── */
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+  70%  { box-shadow: 0 0 0 8px rgba(99, 102, 241, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+}
+
+/* ─── Emergency pulse animation ─── */
+@keyframes emergency-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
+  50%       { box-shadow: 0 0 20px 4px rgba(239, 68, 68, 0.3); }
+}
+
+#emergency-tile:not(:disabled):hover {
+  animation: emergency-pulse 2s ease-in-out infinite;
+}
