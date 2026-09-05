@@ -117,6 +117,4 @@ People with aphasia, post-stroke speech loss, or ALS often know precisely what t
 
 ---
 
-## How this was built
 
-Built end-to-end for a hackathon, at speed, using AI-assisted development throughout — the same way modern engineering teams use compilers, frameworks, and copilots to move faster. Every product decision, design choice, and piece of judgment in this project is the team's own.
