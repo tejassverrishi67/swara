@@ -1,0 +1,10 @@
+{
+  "description": "Designed for users seeking an accessible and straightforward experience, this web app simplifies navigation and enhances usability for all.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
